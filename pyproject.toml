@@ -1,5 +1,5 @@
 [project]
-name = "llama-stack-agentic-sample"
+name = "rhdh-llama-stack-agentic-sample"
 version = "0.1.0"
 description = "Llama-Stack LangGraph Customer Service Example"
 readme = "README.md"
