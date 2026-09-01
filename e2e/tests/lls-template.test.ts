@@ -5,7 +5,7 @@ import { LlsTemplateValues } from '../API/types';
 import { GitHubClient } from '../API/git-client';
 
 describe('Llama stack agentic sample template', () => {
-  const templateUrl = 'https://github.com/redhat-ai-dev/llama-stack-agentic-sample/blob/main/template/template.yaml';
+  const templateUrl = 'https://github.com/redhat-developer/rhdh-llama-stack-agentic-sample/blob/main/template/template.yaml';
   const namespace = process.env.APP_NAMESPACE || 'rhdh-app';
   const templateName = 'llama-stack-agentic';
 
