@@ -1,6 +1,57 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
-  ]
+    "config:recommended",
+    "helpers:pinGitHubActionDigests",
+    ":gitSignOff"
+  ],
+  "timezone": "America/Toronto",
+  "schedule": [
+    "* 19-23 * * 0",
+    "* 0-2 * * 1"
+  ],
+  "baseBranches": ["main"],
+  "enabledManagers": [
+    "dockerfile",
+    "github-actions",
+    "pep621"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["dockerfile", "pep621"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "matchManagers": ["pep621"],
+      "matchPackageNames": ["python"],
+      "matchUpdateTypes": ["major", "minor"],
+      "enabled": false
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "github actions",
+      "groupSlug": "github-actions",
+      "commitMessageTopic": "{{depName}}"
+    },
+    {
+      "matchManagers": ["dockerfile"],
+      "groupName": "dockerfile deps",
+      "groupSlug": "dockerfile-deps",
+      "commitMessageTopic": "{{depName}}"
+    },
+    {
+      "matchManagers": ["pep621"],
+      "groupName": "python deps",
+      "groupSlug": "python-deps",
+      "commitMessageTopic": "{{depName}}"
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
+  "prHourlyLimit": 20,
+  "prConcurrentLimit": 10,
+  "labels": ["renovatebot"],
+  "reviewers": ["team:rhdh-ai"]
 }
