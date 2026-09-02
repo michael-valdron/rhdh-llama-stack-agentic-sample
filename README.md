@@ -1,4 +1,4 @@
-# llama-stack-agentic-sample
+# rhdh-llama-stack-agentic-sample
 
 ![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)
 ![Tests](https://img.shields.io/badge/tests-passing-success.svg)

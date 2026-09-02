@@ -91,7 +91,7 @@ This GitOps repository was generated from the **Llama Stack Agentic AI Workflow*
 
 Want to improve the template, report issues, or contribute new features? Visit the upstream repository:
 
-👉 **[redhat-ai-dev/llama-stack-agentic-sample](https://github.com/redhat-ai-dev/llama-stack-agentic-sample)**
+👉 **[redhat-developer/rhdh-llama-stack-agentic-sample](https://github.com/redhat-developer/rhdh-llama-stack-agentic-sample)**
 
 ---
 
